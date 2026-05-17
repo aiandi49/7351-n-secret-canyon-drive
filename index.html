@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>7351 N Secret Canyon Dr · Lot #48 · The Canyons</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --cream:     #F7F4EE;
+    --warm:      #EDE8DF;
+    --stone:     #C9BFA8;
+    --ink:       #1C1A17;
+    --ink-mid:   #4A4640;
+    --ink-mute:  #8A837A;
+    --gold:      #B8963E;
+    --gold-lt:   #D4AC58;
+    --gold-bg:   rgba(184,150,62,0.08);
+    --gold-bg2:  rgba(184,150,62,0.14);
+    --white:     #FFFFFF;
+    --border:    rgba(100,90,76,0.15);
+    --border-md: rgba(100,90,76,0.25);
+    --shadow-sm: 0 2px 8px rgba(28,26,23,0.06);
+    --shadow-md: 0 8px 32px rgba(28,26,23,0.10);
+    --shadow-lg: 0 20px 60px rgba(28,26,23,0.13);
+    --r: 12px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(184,150,62,0.07) 0%, transparent 70%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 24px 100px; }
+
+  /* ── HEADER ── */
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 28px;
+    padding: 40px 0 36px;
+    border-bottom: 1px solid var(--border-md);
+    margin-bottom: 36px;
+    animation: fadeDown 0.7s ease both;
+  }
+
+  .logo-mark {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--border-md);
+    background: linear-gradient(135deg, var(--gold-bg2), var(--warm));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--gold);
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .header-text { flex: 1; }
+  .header-community {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 4px;
+  }
+  .header-address {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+  }
+
+  .header-price-block { text-align: right; }
+  .price-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-bottom: 4px; }
+  .price-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .price-meta { font-size: 0.72rem; color: var(--ink-mute); margin-top: 4px; }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--stone);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  /* ── PHASE HEADER ── */
+  .phase-header {
+    display: flex; align-items: center; gap: 14px;
+    margin: 32px 0 16px;
+    animation: fadeUp 0.5s ease both;
+  }
+  .phase-line { flex: 1; height: 1px; background: var(--border-md); }
+  .phase-badge {
+    font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--stone); white-space: nowrap;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 14px;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .card-icon {
+    width: 32px; height: 32px; min-width: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-lt) 100%);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .card-icon svg { width: 15px; height: 15px; color: #fff; }
+  .card-icon.ink { background: linear-gradient(135deg, var(--ink) 0%, var(--ink-mid) 100%); }
+
+  /* ── HERO IMAGE CARD ── */
+  .hero-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 14px;
+    animation: fadeUp 0.7s ease 0.05s both;
+  }
+
+  .hero-img-main {
+    width: 100%; height: 420px;
+    object-fit: cover; object-position: center bottom;
+    display: block;
+  }
+
+  .hero-caption {
+    padding: 16px 20px;
+    background: var(--warm);
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .hero-caption-left {
+    font-size: 0.78rem; color: var(--ink-mute);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: var(--gold-bg); border: 1px solid rgba(184,150,62,0.3);
+    color: var(--gold); font-size: 0.65rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 100px;
+  }
+  .hero-badge.active {
+    background: rgba(45,122,79,0.08);
+    border-color: rgba(45,122,79,0.25);
+    color: #2D7A4F;
+  }
+
+  /* ── STATS ROW ── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 14px;
+    animation: fadeUp 0.6s ease 0.1s both;
+  }
+
+  .stat-cell {
+    padding: 20px 16px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .stat-cell:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem; font-weight: 600;
+    color: var(--gold); line-height: 1;
+    display: block; margin-bottom: 4px;
+  }
+  .stat-lbl {
+    font-size: 0.65rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-mute); font-weight: 500;
+  }
+
+  /* ── TWO COL ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+
+  /* ── PHOTO STRIP ── */
+  .photo-strip {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3px;
+    border-radius: var(--r);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 14px;
+    animation: fadeUp 0.6s ease 0.15s both;
+  }
+
+  .photo-strip > div { overflow: hidden; position: relative; }
+  .photo-strip img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+    transition: transform 0.5s ease;
+  }
+  .photo-strip > div:hover img { transform: scale(1.04); }
+  .photo-strip .p-main { height: 280px; }
+  .photo-strip .p-thumb { height: 280px; }
+
+  /* ── DESCRIPTION ── */
+  .desc-text {
+    font-size: 0.9rem; color: var(--ink-mid);
+    line-height: 1.75; font-weight: 300;
+  }
+  .desc-text p + p { margin-top: 14px; }
+
+  /* ── CALLOUT ── */
+  .callout {
+    border-radius: 8px; padding: 14px 16px;
+    margin: 14px 0; font-size: 0.82rem;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .callout svg { flex-shrink: 0; width: 16px; height: 16px; margin-top: 1px; }
+  .callout.tip  { background: var(--gold-bg); border: 1px solid rgba(184,150,62,0.22); color: var(--ink-mid); }
+  .callout.tip svg { color: var(--gold); }
+  .callout.good { background: rgba(45,122,79,0.07); border: 1px solid rgba(45,122,79,0.2); color: var(--ink-mid); }
+  .callout.good svg { color: #2D7A4F; }
+
+  /* ── FEATURE LIST ── */
+  .feature-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+  .feature-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.83rem; color: var(--ink-mid); line-height: 1.45;
+  }
+  .feature-list li::before {
+    content: '';
+    display: block; flex-shrink: 0;
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--gold); margin-top: 6px;
+  }
+
+  /* ── VIEWS BAND ── */
+  .views-band {
+    position: relative;
+    border-radius: var(--r);
+    overflow: hidden;
+    height: 340px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 14px;
+    animation: fadeUp 0.6s ease 0.2s both;
+  }
+  .views-band img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
+    display: block;
+  }
+  .views-band-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(28,26,23,0.72) 0%, rgba(28,26,23,0.2) 60%, transparent 100%);
+    display: flex; align-items: center;
+    padding: 48px;
+  }
+  .views-band-text { max-width: 420px; }
+  .views-eyebrow {
+    font-size: 0.68rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--stone);
+    margin-bottom: 12px; display: flex; align-items: center; gap: 10px;
+  }
+  .views-eyebrow::after { content:''; flex:1; height:1px; background: rgba(201,191,168,0.4); max-width:40px; }
+  .views-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; font-weight: 500; color: #fff;
+    line-height: 1.1; margin-bottom: 14px;
+  }
+  .views-title em { font-style: italic; color: var(--gold-lt); }
+  .views-desc {
+    font-size: 0.85rem; color: rgba(245,240,232,0.75);
+    line-height: 1.7; font-weight: 300;
+  }
+
+  /* ── AGENT CARD ── */
+  .agent-well {
+    background: var(--warm);
+    border: 1px solid var(--border-md);
+    border-radius: var(--r);
+    padding: 28px;
+  }
+
+  .agent-row {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 20px;
+  }
+  .agent-avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--stone), var(--ink-mid));
+    border: 2px solid var(--white);
+    box-shadow: var(--shadow-sm);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; color: #fff; font-weight: 600;
+    flex-shrink: 0;
+  }
+  .agent-name-block {}
+  .agent-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 600; color: var(--ink);
+    line-height: 1.1;
+  }
+  .agent-co {
+    font-size: 0.75rem; color: var(--ink-mute);
+    letter-spacing: 0.06em; margin-top: 2px;
+  }
+
+  .agent-meta {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; margin-bottom: 20px;
+  }
+  .agent-meta-item {
+    font-size: 0.78rem; color: var(--ink-mid);
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .agent-meta-item span:first-child {
+    font-size: 0.65rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--stone); font-weight: 500;
+  }
+
+  .mls-note {
+    font-size: 0.68rem; color: var(--ink-mute);
+    line-height: 1.6; padding-top: 16px;
+    border-top: 1px solid var(--border-md);
+  }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    border-radius: 100px; padding: 11px 24px;
+    font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
+    font-weight: 500; cursor: pointer;
+    transition: all 0.2s; letter-spacing: 0.02em; border: none;
+    text-decoration: none;
+  }
+  .btn svg { width: 14px; height: 14px; }
+  .btn-primary { background: var(--ink); color: var(--white); }
+  .btn-primary:hover { background: var(--ink-mid); transform: translateY(-1px); }
+  .btn-gold { background: var(--gold); color: var(--white); }
+  .btn-gold:hover { background: #a07830; transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--ink); border: 1px solid var(--border-md); }
+  .btn-outline:hover { background: var(--warm); }
+  .btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+
+  /* ── RENDER SHOWCASE ── */
+  .render-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    animation: fadeUp 0.6s ease both;
+  }
+  .render-img {
+    width: 100%; height: 220px;
+    object-fit: cover; display: block;
+  }
+  .render-caption {
+    padding: 14px 16px;
+    border-top: 1px solid var(--border);
+    background: var(--warm);
+  }
+  .render-caption-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem; font-weight: 600; color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .render-caption-sub {
+    font-size: 0.72rem; color: var(--ink-mute);
+  }
+
+  /* ── INFO PILL ROW ── */
+  .pill-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 0; }
+  .info-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: var(--cream); border: 1px solid var(--border-md);
+    border-radius: 100px; padding: 5px 12px;
+    font-size: 0.74rem; color: var(--ink-mid);
+  }
+  .info-pill svg { width: 11px; height: 11px; color: var(--stone); }
+
+  /* ── STATUS STRIP (top nav) ── */
+  .status-strip {
+    background: var(--ink);
+    border-radius: 100px;
+    padding: 10px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 32px;
+    animation: fadeDown 0.6s ease both;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .status-left {
+    font-size: 0.76rem; color: rgba(255,255,255,0.6);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .status-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #2D7A4F;
+    box-shadow: 0 0 0 3px rgba(45,122,79,0.25);
+    flex-shrink: 0;
+    animation: pulse 2s ease infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(45,122,79,0.25); }
+    50% { box-shadow: 0 0 0 6px rgba(45,122,79,0.1); }
+  }
+  .status-right { font-size: 0.75rem; color: rgba(255,255,255,0.45); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border-md);
+    padding: 32px 0 0;
+    margin-top: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem; color: var(--ink-mute); letter-spacing: 0.04em;
+  }
+  .footer-mls {
+    font-size: 0.68rem; color: var(--stone); letter-spacing: 0.06em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown { from { opacity:0; transform:translateY(-14px); } to { opacity:1; transform:none; } }
+  @keyframes fadeUp   { from { opacity:0; transform:translateY(12px);  } to { opacity:1; transform:none; } }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 760px) {
+    header { grid-template-columns: auto 1fr; }
+    .header-price-block { display: none; }
+    .stats-row { grid-template-columns: repeat(3,1fr); }
+    .two-col, .three-col { grid-template-columns: 1fr; }
+    .photo-strip { grid-template-columns: 1fr; }
+    .photo-strip .p-main, .photo-strip .p-thumb { height: 220px; }
+    .views-band { height: 280px; }
+    .views-band-overlay { padding: 28px; }
+    .views-title { font-size: 1.8rem; }
+    .agent-meta { grid-template-columns: 1fr; }
+  }
+  /* ── LIGHTBOX ── */
+  .lightbox-trigger {
+    display: block;
+    cursor: zoom-in;
+    position: relative;
+    height: 100%;
+  }
+  .lightbox-trigger::after {
+    content: '⤢';
+    position: absolute;
+    top: 10px; right: 10px;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: rgba(28,26,23,0.55);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    font-size: 1rem;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    display: flex; align-items: center; justify-content: center;
+    line-height: 32px; text-align: center;
+  }
+  .lightbox-trigger:hover::after { opacity: 1; }
+
+  .hero-card .lightbox-trigger::after { top: 14px; right: 14px; width: 36px; height: 36px; font-size: 1.1rem; }
+
+  #lightbox-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(15,13,11,0.93);
+    backdrop-filter: blur(12px);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  #lightbox-overlay.open { opacity: 1; pointer-events: all; }
+
+  #lightbox-img-wrap {
+    position: relative;
+    max-width: 92vw; max-height: 82vh;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #lightbox-img {
+    max-width: 92vw; max-height: 82vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    transform: scale(0.96);
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  #lightbox-overlay.open #lightbox-img { transform: scale(1); }
+
+  #lightbox-caption {
+    margin-top: 16px;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    text-align: center;
+    max-width: 700px;
+    padding: 0 24px;
+  }
+
+  #lightbox-close {
+    position: fixed; top: 20px; right: 24px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; font-size: 1.3rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+    z-index: 10000;
+    backdrop-filter: blur(6px);
+  }
+  #lightbox-close:hover { background: rgba(255,255,255,0.22); }
+
+  #lightbox-counter {
+    position: fixed; top: 26px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+    z-index: 10000;
+  }
+
+  /* Prev/next arrows */
+  .lb-arrow {
+    position: fixed; top: 50%; transform: translateY(-50%);
+    width: 48px; height: 48px; border-radius: 50%;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+    color: #fff; font-size: 1.2rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s; z-index: 10000;
+    backdrop-filter: blur(6px);
+  }
+  .lb-arrow:hover { background: rgba(255,255,255,0.22); }
+  #lb-prev { left: 20px; }
+  #lb-next { right: 20px; }
+
+  /* Photo strip hover */
+  .photo-strip .lightbox-trigger { height: 100%; }
+  .render-img { transition: transform 0.5s ease; }
+  .render-card .lightbox-trigger:hover .render-img { transform: scale(1.04); }
+
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- STATUS STRIP -->
+  <div class="status-strip">
+    <div class="status-left">
+      <div class="status-dot"></div>
+      Active Listing · MLS #22608383 · Listed March 31, 2026
+    </div>
+    <div class="status-right">Catalina Foothills · Tucson, AZ 85718</div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-mark" style="padding:0;overflow:hidden;background:none;border:2px solid var(--border-md);">
+      <img src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/profile-pic.png" alt="Alexander Dery-Chaffin" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
+    </div>
+    <div class="header-text">
+      <div class="header-community">The Canyons · Guard-Gated · Catalina Foothills</div>
+      <div class="header-address">7351 N Secret Canyon Drive, Lot #48</div>
+    </div>
+    <div class="header-price-block">
+      <div class="price-label">Asking Price</div>
+      <div class="price-value">$1,000,000</div>
+      <div class="price-meta">1.49 Acres · Land</div>
+    </div>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <div class="hero-card">
+    <a href="#" class="lightbox-trigger" data-src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/01_HERO_aerial_canyon.jpg" data-caption="Aerial View — The Canyons, Catalina Foothills · Tucson, AZ">
+    <img class="hero-img-main" src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/01_HERO_aerial_canyon.jpg" alt="Aerial view of The Canyons, Tucson AZ" loading="eager"/>
+    </a>
+    <div class="hero-caption">
+      <div class="hero-caption-left">
+        <span class="hero-badge active">● Active</span>
+        <span>7351 N Secret Canyon Dr · Lot #48 · Tucson, AZ 85718</span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span class="hero-badge">Land / Residential</span>
+        <span class="hero-badge">No HOA</span>
+        <span class="hero-badge">Guard-Gated</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-cell">
+      <span class="stat-num">1.49</span>
+      <span class="stat-lbl">Acres</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">64,941</span>
+      <span class="stat-lbl">Total Sq Ft</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">~6,000</span>
+      <span class="stat-lbl">Buildable Sq Ft</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">360°</span>
+      <span class="stat-lbl">Panoramic Views</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">$0</span>
+      <span class="stat-lbl">HOA / Month</span>
+    </div>
+    <div class="stat-cell">
+      <span class="stat-num">1-Lvl</span>
+      <span class="stat-lbl">Buildable Envelope</span>
+    </div>
+  </div>
+
+  <!-- PROPERTY DESCRIPTION -->
+  <div class="phase-header">
+    <div class="phase-badge">The Opportunity</div>
+    <div class="phase-line"></div>
+  </div>
+
+  <div class="two-col" style="margin-bottom:14px;">
+    <div class="card" style="animation-delay:0.05s;">
+      <div class="card-title">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        Ridgetop Homesite Overview
+      </div>
+      <div class="desc-text">
+        <p>Set within The Canyons — the pinnacle of Catalina Foothills living — this 1.49-acre ridgetop homesite is one of the last true premier land offerings in Tucson's most exclusive guard-gated community.</p>
+        <p>Elevated and gently sloping, it offers a highly buildable envelope — a rare advantage in a mountainside setting where many remaining lots are defined by steep terrain and expensive site work.</p>
+        <p>The natural pad easily supports a single-level luxury residence of approximately 6,000 sq ft, allowing you to invest in architecture and finish rather than heavy excavation.</p>
+      </div>
+      <div class="callout tip" style="margin-top:16px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div><strong>No heavy excavation required.</strong> The natural grade works in your favor — a rare advantage in the Catalina Foothills where buildable terrain commands a significant premium.</div>
+      </div>
+    </div>
+
+    <div class="card" style="animation-delay:0.1s;">
+      <div class="card-title">
+        <div class="card-icon ink">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        </div>
+        Lot Details
+      </div>
+      <ul class="feature-list">
+        <li>1.49-acre ridgetop parcel in The Canyons</li>
+        <li>64,941 sq ft total lot size</li>
+        <li>North/south exposure orientation</li>
+        <li>Gently sloping natural pad — highly buildable</li>
+        <li>Cul-de-sac / private road position</li>
+        <li>Adjacent to natural wash</li>
+        <li>Subdivided and survey-ready</li>
+        <li>No HOA fees on this specific lot</li>
+        <li>Public water source available</li>
+        <li>Native desert vegetation: saguaro, ocotillo, palo verde</li>
+      </ul>
+      <div class="callout good" style="margin-top:16px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div><strong>Active listing.</strong> Status verified April 20, 2026. County: Pima · SAZMLS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTO GRID -->
+  <div class="phase-header">
+    <div class="phase-badge">Property Gallery</div>
+    <div class="phase-line"></div>
+  </div>
+
+  <div class="photo-strip">
+    <div class="p-main">
+      <a href="#" class="lightbox-trigger" data-src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/03_PHOTO_STRIP_main_architectural_render.png" data-caption="Architectural Render — Proposed Luxury Residence · Lot #48">
+        <img src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/03_PHOTO_STRIP_main_architectural_render.png" alt="Architectural render — proposed residence" loading="lazy"/>
+      </a>
+    </div>
+    <div class="p-thumb">
+      <a href="#" class="lightbox-trigger" data-src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/04_PHOTO_STRIP_thumb_aerial_lot_render.png" data-caption="Aerial Lot Render — 7351 N Secret Canyon Drive · 1.49 Acres">
+        <img src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/04_PHOTO_STRIP_thumb_aerial_lot_render.png" alt="Aerial lot render" loading="lazy"/>
+      </a>
+    </div>
+    <div class="p-thumb">
+      <a href="#" class="lightbox-trigger" data-src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/05_PHOTO_STRIP_thumb_site_plan_render.png" data-caption="Site Plan Render — Buildable Envelope & Lot Configuration">
+        <img src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/05_PHOTO_STRIP_thumb_site_plan_render.png" alt="Site plan render" loading="lazy"/>
+      </a>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="render-card" style="animation-delay:0.05s;">
+      <a href="#" class="lightbox-trigger" data-src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/01_HERO_aerial_canyon.jpg" data-caption="Catalina Foothills Panorama — View corridor from Lot #48">
+        <img class="render-img" src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/01_HERO_aerial_canyon.jpg" alt="Canyon view from lot" loading="lazy"/>
+      </a>
+      <div class="render-caption">
+        <div class="render-caption-title">Catalina Foothills Panorama</div>
+        <div class="render-caption-sub">View corridor from Lot #48 — unobstructed mountain and city lights exposure</div>
+      </div>
+    </div>
+    <div class="render-card" style="animation-delay:0.1s;">
+      <a href="#" class="lightbox-trigger" data-src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/02_HERO_community_aerial.jpg" data-caption="The Canyons Community — Guard-gated enclave, Lot #48 at the ridgetop">
+        <img class="render-img" src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/02_HERO_community_aerial.jpg" alt="The Canyons aerial" loading="lazy"/>
+      </a>
+      <div class="render-caption">
+        <div class="render-caption-title">The Canyons Community</div>
+        <div class="render-caption-sub">Aerial of the guard-gated enclave — Lot #48 positioned at the ridgetop</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="phase-header">
+    <div class="phase-badge">Build Vision — Based on $9.5M Neighboring Estate</div>
+    <div class="phase-line"></div>
+  </div>
+
+  <div class="card" style="animation-delay:0.05s;">
+    <div class="card-title">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+      </div>
+      What You Can Build Here
+    </div>
+    <div style="font-size:0.82rem;color:var(--ink-mute);margin-bottom:20px;">Features drawn from the adjacent $9.5M estate at 3569 E Secret Canyon Place — your blueprint for what's achievable on this parcel.</div>
+
+    <div class="three-col" style="margin-bottom:0;">
+      <div>
+        <div class="section-label">Architecture</div>
+        <ul class="feature-list">
+          <li>Contemporary / modern style</li>
+          <li>Concrete block &amp; masonry stucco</li>
+          <li>18-foot soaring ceilings</li>
+          <li>Walls of glass — full facade</li>
+          <li>Signature sky bridge connector</li>
+          <li>Entrance foyer with grand arrival</li>
+          <li>Double pane floor-to-ceiling windows</li>
+          <li>Vaulted ceiling volumes</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Interior Spaces</div>
+        <ul class="feature-list">
+          <li>5 bedrooms · 6 bathrooms</li>
+          <li>Dual onyx kitchen islands</li>
+          <li>Bespoke luxury finishes</li>
+          <li>Walk-in closets in all suites</li>
+          <li>Wet bar / entertainment bar</li>
+          <li>Stone &amp; premium flooring</li>
+          <li>Built-in features &amp; millwork</li>
+          <li>Laundry room w/ sink</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Resort Outdoor Living</div>
+        <ul class="feature-list">
+          <li>Resort-style infinity-edge pool</li>
+          <li>Travertine pool deck surround</li>
+          <li>Built-in barbecue / outdoor kitchen</li>
+          <li>Glass-rail balcony</li>
+          <li>Fountain / water feature</li>
+          <li>Outdoor entertaining terrace</li>
+          <li>5 fireplace / fire features</li>
+          <li>Outdoor fire pit</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="height:1px;background:var(--border);margin:20px 0;"></div>
+
+    <div class="three-col" style="margin-bottom:0;">
+      <div>
+        <div class="section-label">Garage &amp; Arrival</div>
+        <ul class="feature-list">
+          <li>16 total garage spaces</li>
+          <li>Tandem garage configuration</li>
+          <li>Separate storage area</li>
+          <li>Motor court / arrival experience</li>
+          <li>Guard-gated community entry</li>
+          <li>Winding private driveway</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Systems &amp; Utilities</div>
+        <ul class="feature-list">
+          <li>Central air — dual zoned HVAC</li>
+          <li>Forced air natural gas heating</li>
+          <li>Zoned throughout</li>
+          <li>Ceiling fans in all zones</li>
+          <li>Public water source</li>
+          <li>Sprinkler / drip irrigation</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-label">Views &amp; Setting</div>
+        <ul class="feature-list">
+          <li>Panoramic 360° views</li>
+          <li>Catalina Mountain views</li>
+          <li>Tucson city light views</li>
+          <li>Sunrise &amp; sunset exposure</li>
+          <li>Elevated ridgetop seclusion</li>
+          <li>Private hillside siting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEWS BAND -->
+  <div class="views-band">
+    <a href="#" class="lightbox-trigger" data-src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/02_HERO_community_aerial.jpg" data-caption="The Canyons — Sunrise to Sunset, Panoramic 360° Views">
+      <img src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/02_HERO_community_aerial.jpg" alt="View from The Canyons ridgetop" loading="lazy"/>
+    </a>
+    <div class="views-band-overlay">
+      <div class="views-band-text">
+        <div class="views-eyebrow">The Setting</div>
+        <div class="views-title">Sunrise to <em>Sunset</em>,<br>All Yours</div>
+        <div class="views-desc">Panoramic 360° views spanning Catalina Mountain peaks, Tucson city lights, and uninterrupted desert sky — from a ridgetop no structure can ever obstruct.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENT + CTA -->
+  <div class="phase-header">
+    <div class="phase-badge">Listing Information</div>
+    <div class="phase-line"></div>
+  </div>
+
+  <div class="two-col">
+    <div class="card" style="animation-delay:0.05s;">
+      <div class="card-title">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        Get in Touch
+      </div>
+      <div style="font-size:0.88rem;color:var(--ink-mid);line-height:1.7;margin-bottom:20px;">
+        This is one of the last ridgetop homesites available in The Canyons. The terrain, the views, and the buildability rarely align in a single parcel — reach out to discuss further or schedule a site visit.
+      </div>
+      <div class="pill-row" style="margin-bottom:20px;">
+        <div class="info-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Tucson, AZ 85718
+        </div>
+        <div class="info-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Listed March 31, 2026
+        </div>
+        <div class="info-pill">MLS #22608383</div>
+      </div>
+      <div class="btn-row" style="margin-top:0;">
+        <a class="btn btn-primary" href="mailto:alexander.dery-chaffin@cordovarealty.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Request Information
+        </a>
+        <a class="btn btn-outline" href="tel:+1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.22 1.18 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          Schedule a Showing
+        </a>
+      </div>
+    </div>
+
+    <div class="agent-well" style="animation-delay:0.1s;">
+      <div class="agent-row">
+        <div class="agent-avatar" style="padding:0;overflow:hidden;background:none;border:2px solid var(--white);">
+          <img src="https://cwtqstdxiythhnedpqtp.supabase.co/storage/v1/object/public/7351-N-SECRET-CANYON-DRIVE/profile-pic.png" alt="Alexander Dery-Chaffin" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"/>
+        </div>
+        <div class="agent-name-block">
+          <div class="agent-name">Alexander Dery-Chaffin</div>
+          <div class="agent-co">Cordova Realty · Listing Agent</div>
+        </div>
+      </div>
+      <div class="agent-meta">
+        <div class="agent-meta-item">
+          <span>MLS Number</span>
+          <span>#22608383</span>
+        </div>
+        <div class="agent-meta-item">
+          <span>Status</span>
+          <span>Active</span>
+        </div>
+        <div class="agent-meta-item">
+          <span>Listed</span>
+          <span>March 31, 2026</span>
+        </div>
+        <div class="agent-meta-item">
+          <span>Updated</span>
+          <span>April 20, 2026</span>
+        </div>
+        <div class="agent-meta-item">
+          <span>County</span>
+          <span>Pima · SAZMLS</span>
+        </div>
+        <div class="agent-meta-item">
+          <span>Asking Price</span>
+          <span style="color:var(--gold);font-weight:600;">$1,000,000</span>
+        </div>
+      </div>
+      <div class="mls-note">
+        Listing information sourced from the Multiple Listing Service of Southern Arizona (SAZMLS). IDX data provided for consumers' personal, non-commercial use only. Data believed reliable but not guaranteed. © 2026 MLSSAZ. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">The Canyons · Tucson, AZ · Lot #48</div>
+    <div class="footer-mls">MLS #22608383 · Cordova Realty · SAZMLS · © 2026</div>
+  </footer>
+
+</div>
+<!-- LIGHTBOX OVERLAY -->
+<div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div id="lightbox-counter"></div>
+  <button id="lightbox-close" aria-label="Close">✕</button>
+  <button class="lb-arrow" id="lb-prev" aria-label="Previous image">&#8592;</button>
+  <div id="lightbox-img-wrap">
+    <img id="lightbox-img" src="" alt=""/>
+  </div>
+  <div id="lightbox-caption"></div>
+  <button class="lb-arrow" id="lb-next" aria-label="Next image">&#8594;</button>
+</div>
+
+<script>
+(function(){
+  const overlay  = document.getElementById('lightbox-overlay');
+  const lbImg    = document.getElementById('lightbox-img');
+  const lbCap    = document.getElementById('lightbox-caption');
+  const lbClose  = document.getElementById('lightbox-close');
+  const lbPrev   = document.getElementById('lb-prev');
+  const lbNext   = document.getElementById('lb-next');
+  const lbCount  = document.getElementById('lightbox-counter');
+
+  // Collect all lightbox triggers in DOM order
+  const triggers = Array.from(document.querySelectorAll('.lightbox-trigger'));
+  let current = 0;
+
+  function open(idx) {
+    current = (idx + triggers.length) % triggers.length;
+    const t = triggers[current];
+    const src = t.getAttribute('data-src');
+    const cap = t.getAttribute('data-caption') || '';
+    lbImg.src = src;
+    lbImg.alt = cap;
+    lbCap.textContent = cap;
+    lbCount.textContent = (current + 1) + ' / ' + triggers.length;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbImg.style.opacity = '0';
+    lbImg.onload = function(){ lbImg.style.transition='opacity 0.25s'; lbImg.style.opacity='1'; };
+    // If already cached
+    if (lbImg.complete && lbImg.naturalWidth) { lbImg.style.opacity='1'; }
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(()=>{ lbImg.src=''; }, 300);
+  }
+
+  triggers.forEach(function(t, i){
+    t.addEventListener('click', function(e){
+      e.preventDefault();
+      open(i);
+    });
+  });
+
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', function(){ open(current - 1); });
+  lbNext.addEventListener('click', function(){ open(current + 1); });
+
+  overlay.addEventListener('click', function(e){
+    if (e.target === overlay) close();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape')       close();
+    if (e.key === 'ArrowLeft')    open(current - 1);
+    if (e.key === 'ArrowRight')   open(current + 1);
+  });
+
+  // Hide arrows if only 1 image
+  if (triggers.length <= 1) {
+    lbPrev.style.display = 'none';
+    lbNext.style.display = 'none';
+    lbCount.style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
